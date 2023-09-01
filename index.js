@@ -49,3 +49,18 @@ blocks.addEventListener('click',function(){
     block.className = "block"
     blocks.appendChild(block)
 })
+
+
+
+// colors that blocks will change to
+const colors = ["#00A36C","#90EE90","#0BDA51","green","green"]
+
+setInterval(function(){
+    let allBlock = document.querySelectorAll('#block')
+    if(allBlock.length > 1){
+        allBlock.forEach(function(currentBlock, index, array){
+            const color = Math.floor(Math.random()* colors.length)
+            currentBlock.style.backgroundColor = colors[color]
+        })
+    }
+},1000)
