@@ -64,9 +64,33 @@
     text-align: center;
 }
 
+.description > p{
+    font-size: xx-small;
+}
 
 .form-container{
     grid-column: 1/3;
     grid-row: 3/5;
     text-align: center;
+
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows: auto;
+    display: grid;
+    grid-gap: 10px;
+}
+
+.form-container > div{
+    grid-row: auto;
+    background-color: red;
+    border-radius: 10px;
+}
+
+.info-display{
+    grid-column: 1;
+
+}
+
+
+.form-parent{
+    grid-column: 2;    
 }

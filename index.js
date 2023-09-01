@@ -63,4 +63,4 @@ setInterval(function(){
             currentBlock.style.backgroundColor = colors[color]
         })
     }
-},1000)
+},500)
