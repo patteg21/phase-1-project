@@ -1,0 +1,9 @@
+.body{
+    color:aliceblue;
+    background-color: black;
+}
+
+.content-wrapper{
+    grid-template-columns: 2fr 2fr;
+    grid-template-rows:minmax(150px,auto);
+}
