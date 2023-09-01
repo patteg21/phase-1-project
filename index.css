@@ -81,7 +81,6 @@
 
 .form-container > div{
     grid-row: auto;
-    background-color: red;
     border-radius: 10px;
 }
 
@@ -93,4 +92,9 @@
 
 .form-parent{
     grid-column: 2;    
+}
+
+.form{
+    padding: 10px;
+    display: block;
 }
