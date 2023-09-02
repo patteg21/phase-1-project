@@ -1,10 +1,16 @@
 {
-  "people":
-  [
+  "person": [
     {
-    "name": "Gareth",
-    "age": "23",
-    "color": "#000000"
+      "name": "Gareth",
+      "age": "23",
+      "color": "#000000",
+      "id": 1
+    },
+    {
+      "name": "Anderson",
+      "age": "25",
+      "color": "#dd3636",
+      "id": 2
     }
   ]
 }

@@ -100,8 +100,7 @@ form.addEventListener("submit",function(event){
         "color":color,
     }
 
-    // grabs all the data from the db.json
-    fetch("http://localhost:3000/people",{
+    fetch("http://localhost:3000/person",{
         method:"POST",
         headers:{
             "Content-Type":"application/json"
