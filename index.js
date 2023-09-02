@@ -1,3 +1,5 @@
+//json-server --watch db.json
+
 // sets the variable for the movement piece
 const iMove = document.getElementById("i-move")
 
@@ -66,6 +68,8 @@ setInterval(function(){
 },500)
 
 
+
+
 const form = document.getElementById("form");
 
 form.addEventListener("submit",function(event){
@@ -80,4 +84,13 @@ form.addEventListener("submit",function(event){
         "age":age,
         "color":color,
     }
+
+    // for the db.json server
+    fetch('http://localhost:3000/people', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json',
+        },
+        body: JSON.stringify(person),
+    })
 })
