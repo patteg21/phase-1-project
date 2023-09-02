@@ -141,7 +141,6 @@ function underNum(){
         const filtered = data.filter(function(person){
             return parseInt(person.age) < ageLimit
         });
-        console.log(filtered)
 
 
         filtered.forEach(function(youngling){
