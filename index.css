@@ -97,4 +97,14 @@
 .form{
     padding: 10px;
     display: block;
+    text-align: left;
+}
+
+.form >label{
+    display: block; /* Display labels as block elements */
+    margin-bottom: 5px; 
+}
+
+.form > input{
+    align-self: left;
 }

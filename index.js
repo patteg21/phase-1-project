@@ -59,8 +59,25 @@ setInterval(function(){
     let allBlock = document.querySelectorAll('#block')
     if(allBlock.length > 1){
         allBlock.forEach(function(currentBlock, index, array){
-            const color = Math.floor(Math.random()* colors.length)
-            currentBlock.style.backgroundColor = colors[color]
+            const colorIndex = Math.floor(Math.random()* colors.length)
+            currentBlock.style.backgroundColor = colors[colorIndex]
         })
     }
 },500)
+
+
+const form = document.getElementById("form");
+
+form.addEventListener("submit",function(event){
+    event.preventDefault()
+
+    const name = document.getElementById("name").value
+    const age = document.getElementById("age").value
+    const color = document.getElementById("name").value
+
+    const person = {
+        "name":name,
+        "age":age,
+        "color":color,
+    }
+})
