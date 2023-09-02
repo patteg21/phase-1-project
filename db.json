@@ -1,7 +1,10 @@
 {
-  "people": {
-    "name": "Anderson",
-    "age": "24",
-    "color": "Anderson"
-  }
+  "people":
+  [
+    {
+    "name": "Gareth",
+    "age": "23",
+    "color": "#000000"
+    }
+  ]
 }

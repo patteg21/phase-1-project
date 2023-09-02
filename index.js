@@ -1,5 +1,15 @@
 //json-server --watch db.json
 
+
+// // grabs all the data from the db.json
+// fetch('http://localhost:3000/people')
+// .then((response) => response.json())
+// .then((data)=>{
+//     console.log(data)
+
+// });
+
+
 // sets the variable for the movement piece
 const iMove = document.getElementById("i-move")
 
@@ -77,7 +87,7 @@ form.addEventListener("submit",function(event){
 
     const name = document.getElementById("name").value
     const age = document.getElementById("age").value
-    const color = document.getElementById("name").value
+    const color = document.getElementById("color").value
 
     const person = {
         "name":name,
@@ -85,12 +95,19 @@ form.addEventListener("submit",function(event){
         "color":color,
     }
 
-    // for the db.json server
-    fetch('http://localhost:3000/people', {
-        method: 'POST',
-        headers: {
-            'Content-Type': 'application/json',
+    // grabs all the data from the db.json
+    fetch("http://localhost:3000/people",{
+        method:"POST",
+        headers:{
+            "Content-Type":"application/json"
         },
-        body: JSON.stringify(person),
+        body:JSON.stringify(person),
+
     })
-})
+    .then((response) => response.json())
+    .then((data)=>{
+        console.log(data)
+
+    });
+
+});
