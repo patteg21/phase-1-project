@@ -111,5 +111,47 @@ form.addEventListener("submit",function(event){
     .then((data)=>{
         console.log(data)
     });
-
 });
+
+
+const totalAge = document.getElementById("total-age")
+
+function getTotalAge(){
+    fetch('http://localhost:3000/person')
+    .then((response) => response.json())
+    .then((data)=>{
+        console.log(data)
+        const sum = data.reduce(function(accumulator,current){
+            let num = parseInt(current.age)          
+            return num + accumulator
+        },0)
+
+        totalAge.innerText = sum
+    });
+}
+
+const underAge = document.getElementById("under-num")
+const ageLimit = 25
+
+function underNum(){
+    fetch('http://localhost:3000/person')
+    .then((response) => response.json())
+    .then((data)=>{
+        console.log(data)
+        const filtered = data.filter(function(person){
+            return parseInt(person.age) < ageLimit
+        });
+        console.log(filtered)
+
+
+        filtered.forEach(function(youngling){
+            const personElement = document.createElement('p')
+            personElement.innerHTML= youngling.name
+            underAge.appendChild(personElement)
+        });
+    });
+};
+
+
+getTotalAge()
+underNum()

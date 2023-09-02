@@ -82,6 +82,7 @@
 .form-container > div{
     grid-row: auto;
     border-radius: 10px;
+    padding: 10px;
 }
 
 .form-parent{
@@ -105,6 +106,20 @@
 
 .info-display{
     grid-column: 2;
-    background-color: red;
+    text-align: left;
 }
 
+.info-display > h3{
+    margin: 0px;
+    padding: 5px;
+}
+
+.under-num > p{
+    font-size: 15px;
+    margin: 0px;
+}
+
+.total-age{
+    font-size: 15px;
+    margin: 0px;
+}
