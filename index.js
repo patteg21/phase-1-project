@@ -47,7 +47,7 @@ document.addEventListener('keydown', function(event){
     }
 
     moveMe();
-})
+});
 
 // sets the current position of the header
 moveMe();
@@ -59,10 +59,10 @@ const blocks = document.getElementById('blocks');
 // listens for when the blocks are clicked
 blocks.addEventListener('click',function(){
     const block = document.createElement('div');
-    block.id = "block"
-    block.className = "block"
+    block.id = "block";
+    block.className = "block";
     blocks.appendChild(block);
-})
+});
 
 
 
@@ -75,9 +75,9 @@ setInterval(function(){
         allBlock.forEach(function(currentBlock, index, array){
             const colorIndex = Math.floor(Math.random()* colors.length);
             currentBlock.style.backgroundColor = colors[colorIndex];
-        })
+        });
     }
-},500)
+},500);
 
 
 
@@ -87,8 +87,8 @@ const form = document.getElementById("form");
 form.addEventListener("submit",function(event){
     event.preventDefault();
 
-    const name = document.getElementById("name").value
-    const age = document.getElementById("age").value
+    const name = document.getElementById("name").value;
+    const age = document.getElementById("age").value;
     const color = document.getElementById("color").value.toString();
 
     console.log(name);
@@ -100,7 +100,7 @@ form.addEventListener("submit",function(event){
         "name":name,
         "age":age,
         "color":color,
-    }
+    };
 
     fetch("http://localhost:3000/person",{
         method:"POST",
@@ -111,7 +111,7 @@ form.addEventListener("submit",function(event){
     })
     .then((response) => response.json())
     .then((data)=>{
-        console.log(data)
+        console.log(data);
     });
 });
 
@@ -124,8 +124,8 @@ function getTotalAge(){
     .then((data)=>{
         console.log(data);
         const sum = data.reduce(function(accumulator,current){
-            let num = parseInt(current.age)          
-            return num + accumulator
+            let num = parseInt(current.age);
+            return num + accumulator;
         },0);
 
         totalAge.innerText = sum;
@@ -139,7 +139,7 @@ function underNum(){
     fetch('http://localhost:3000/person')
     .then((response) => response.json())
     .then((data)=>{
-        console.log(data)
+        console.log(data);
         const filtered = data.filter(function(person){
             return parseInt(person.age) < ageLimit;
         });
@@ -151,7 +151,7 @@ function underNum(){
             underAge.appendChild(personElement);
         });
     });
-};
+}
 
 
 getTotalAge();
