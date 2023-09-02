@@ -11,6 +11,24 @@
       "age": "25",
       "color": "#dd3636",
       "id": 2
+    },
+    {
+      "name": "Saylor",
+      "age": "23",
+      "color": "#423e3e",
+      "id": 3
+    },
+    {
+      "name": "Sterling",
+      "age": "23",
+      "color": "#2737b0",
+      "id": 4
+    },
+    {
+      "name": "Mom",
+      "age": "56",
+      "color": "#9c8181",
+      "id": 5
     }
   ]
 }

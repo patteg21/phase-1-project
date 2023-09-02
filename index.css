@@ -84,14 +84,8 @@
     border-radius: 10px;
 }
 
-.info-display{
-    grid-column: 1;
-
-}
-
-
 .form-parent{
-    grid-column: 2;    
+    grid-column: 1;    
 }
 
 .form{
@@ -108,3 +102,9 @@
 .form > input{
     align-self: left;
 }
+
+.info-display{
+    grid-column: 2;
+    background-color: red;
+}
+
