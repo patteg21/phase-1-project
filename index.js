@@ -87,7 +87,12 @@ form.addEventListener("submit",function(event){
 
     const name = document.getElementById("name").value
     const age = document.getElementById("age").value
-    const color = document.getElementById("color").value
+    const color = document.getElementById("color").value.toString()
+
+    console.log(name)
+    console.log(age)
+    console.log(color)
+
 
     const person = {
         "name":name,
@@ -102,12 +107,10 @@ form.addEventListener("submit",function(event){
             "Content-Type":"application/json"
         },
         body:JSON.stringify(person),
-
     })
     .then((response) => response.json())
     .then((data)=>{
         console.log(data)
-
     });
 
 });
