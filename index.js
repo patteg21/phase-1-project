@@ -1,3 +1,5 @@
+/* jshint esversion: 6 */
+
 //json-server --watch db.json
 
 
